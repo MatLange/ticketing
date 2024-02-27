@@ -1,18 +1,18 @@
-apiVersion: skaffold/v4beta3
+apiVersion: skaffold/v2alpha3
 kind: Config
-manifests:
-  rawYaml:
-    - ./infra/k8s/*
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
 build:
   local:
     push: false
   artifacts:
-    - image: matlan78/auth
+    - image: rallycoding/auth
       context: auth
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: "src/**/*.js"
+          - src: "src/**/*.ts"
             dest: .
-

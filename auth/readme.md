@@ -6,3 +6,5 @@ tsc --init
 npm install express-async-errors --save
 # Install Mongoose to be able to create to a MongoDB
 npm install mongoose
+# Install Mongoose types to pair it up with Typescript
+npm install @types/mongoose

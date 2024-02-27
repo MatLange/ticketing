@@ -1,11 +1,9 @@
-import express from 'express';
+import express from "express";
 
 const router = express.Router();
 
-router.post('/api/users/signin', (req,res) => {    
-    res.send('Hi there!');
-    console.log('currentUserRouter: signIn');
+router.post("/api/users/signin", (req, res) => {
+  res.send("Hi there!");
 });
-
 
 export { router as signinRouter };
